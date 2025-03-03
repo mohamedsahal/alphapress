@@ -17,8 +17,25 @@
   }
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grid-size: 30px;
+  --grid-color-light: rgba(0, 0, 0, 0.05);
+  --grid-color-dark: rgba(255, 255, 255, 0.05);
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-size: var(--grid-size) var(--grid-size);
+  background-image: 
+    linear-gradient(var(--grid-color-light) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color-light) 1px, transparent 1px);
+}
+
+[data-theme="dark"] body {
+  background-image: 
+    linear-gradient(var(--grid-color-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color-dark) 1px, transparent 1px);
 }
