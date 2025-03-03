@@ -39,3 +39,16 @@ body {
     linear-gradient(var(--grid-color-dark) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color-dark) 1px, transparent 1px);
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}

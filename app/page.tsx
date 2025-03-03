@@ -2,6 +2,7 @@
 
 import { useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
+import Image from 'next/image';
 
 export default function Home() {
   const { darkMode } = useTheme();
@@ -162,6 +163,41 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Brand Showcase Section */}
+        <section className="container mx-auto px-4 py-20 overflow-hidden">
+          <h2 className="text-4xl font-bold text-center mb-16">Brands We've Worked With</h2>
+          <div className="relative">
+            <div className="flex space-x-8 animate-scroll">
+              <div className="flex items-center min-w-max">
+                <Image src="/Brands/Arafat .png" alt="Arafat Hospital" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/Mycash.png" alt="Mycash" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/Somtel.png" alt="Somtel" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/amal bank.png" alt="Amal Bank" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/asal.png" alt="Asal" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/kfg.png" alt="KFG" width={200} height={80} className="object-contain h-20" />
+              </div>
+              <div className="flex items-center min-w-max">
+                <Image src="/Brands/Arafat .png" alt="Arafat Hospital" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/Mycash.png" alt="Mycash" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/Somtel.png" alt="Somtel" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/amal bank.png" alt="Amal Bank" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/asal.png" alt="Asal" width={200} height={80} className="object-contain h-20" />
+                <div className="h-16 mx-4 border-l-2 border-dashed border-gray-300 opacity-30"></div>
+                <Image src="/Brands/kfg.png" alt="KFG" width={200} height={80} className="object-contain h-20" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Our Work Section */}
         <section className="container mx-auto px-4 py-20">
           <h2 className="text-4xl font-bold text-center mb-16">Our Recent Projects</h2>
@@ -286,6 +322,45 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {/* Client Testimonials Section */}
+      <section className="container mx-auto px-4 py-20">
+        <h2 className="text-4xl font-bold text-center mb-16">What Our Clients Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Testimonial 1 */}
+          <div className={`group p-8 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-transparent hover:border-[#EE4263]`}>
+            <div className="text-[#EE4263] mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+            </div>
+            <p className="text-lg mb-6 opacity-90">"Alpha Press transformed our online presence. Highly recommend their services!"</p>
+            <div className="font-medium">– Ahmed M.</div>
+          </div>
+
+          {/* Testimonial 2 */}
+          <div className={`group p-8 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-transparent hover:border-[#EE4263]`}>
+            <div className="text-[#EE4263] mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+            </div>
+            <p className="text-lg mb-6 opacity-90">"The branding and printing quality is top-notch. Our business cards look amazing!"</p>
+            <div className="font-medium">– Fadumo A.</div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className={`group p-8 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-transparent hover:border-[#EE4263]`}>
+            <div className="text-[#EE4263] mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+            </div>
+            <p className="text-lg mb-6 opacity-90">"Their digital marketing strategies skyrocketed our engagement. Best decision ever!"</p>
+            <div className="font-medium">– Mohamed H.</div>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action Section */}
       <section className="container mx-auto px-4 py-20">
