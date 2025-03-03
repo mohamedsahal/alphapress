@@ -161,6 +161,130 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Our Work Section */}
+        <section className="container mx-auto px-4 py-20">
+          <h2 className="text-4xl font-bold text-center mb-16">Our Recent Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Branding Project */}
+            <div className={`group relative overflow-hidden rounded-xl aspect-video ${darkMode ? 'bg-white/5' : 'bg-black/5'}`}>
+              <video
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                poster="/work/video-thumbnail.jpg"
+                muted
+                loop
+                autoPlay
+                playsInline
+              >
+                <source src="/work/Edahab.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Edahab Financial Services</h3>
+                <p className="text-sm opacity-90">Innovative digital payment solutions transforming financial accessibility.</p>
+              </div>
+            </div>
+
+            {/* Website Design */}
+            <div className={`group relative overflow-hidden rounded-xl aspect-video ${darkMode ? 'bg-white/5' : 'bg-black/5'}`}>
+              <video
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                poster="/work/video-thumbnail.jpg"
+                muted
+                loop
+                autoPlay
+                playsInline
+              >
+                <source src="/work/alpha.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Tech Startup Website</h3>
+                <p className="text-sm opacity-90">Modern, responsive website design for an AI-powered startup.</p>
+              </div>
+            </div>
+
+            {/* Marketing Campaign - Mycash */}
+            <div className={`group relative overflow-hidden rounded-xl aspect-video ${darkMode ? 'bg-white/5' : 'bg-black/5'}`}>
+              <video
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                poster="/work/video-thumbnail.jpg"
+                muted
+                loop
+                autoPlay
+                playsInline
+              >
+                <source src="/work/Mycash.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Mycash Digital Wallet</h3>
+                <p className="text-sm opacity-90">Revolutionary mobile payment solution with enhanced user experience.</p>
+                <div className="flex gap-4 mt-2">
+                  <span className="text-xs bg-[#EE4263] px-2 py-1 rounded">300% Engagement</span>
+                  <span className="text-xs bg-[#EE4263] px-2 py-1 rounded">5M Reach</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Video Ad - Amal */}
+            <div className={`group relative overflow-hidden rounded-xl aspect-video ${darkMode ? 'bg-white/5' : 'bg-black/5'}`}>
+              <video
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                poster="/work/video-thumbnail.jpg"
+                muted
+                loop
+                autoPlay
+                playsInline
+              >
+                <source src="/work/amal.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Amal Mastercard</h3>
+                <p className="text-sm opacity-90">Compelling video narrative showcasing brand values and impact.</p>
+              </div>
+            </div>
+
+            {/* Video Ad - Somtel */}
+            <div className={`group relative overflow-hidden rounded-xl aspect-video ${darkMode ? 'bg-white/5' : 'bg-black/5'}`}>
+              <video
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                poster="/work/video-thumbnail.jpg"
+                muted
+                loop
+                autoPlay
+                playsInline
+              >
+                <source src="/work/somtel.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Somtel Telecommunications</h3>
+                <p className="text-sm opacity-90">Dynamic video showcasing telecom services and connectivity solutions.</p>
+              </div>
+            </div>
+
+            {/* Video Ad - Arafat Hospital */}
+            <div className={`group relative overflow-hidden rounded-xl aspect-video ${darkMode ? 'bg-white/5' : 'bg-black/5'}`}>
+              <video
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                poster="/work/video-thumbnail.jpg"
+                muted
+                loop
+                autoPlay
+                playsInline
+              >
+                <source src="/work/arafat hospital.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-semibold mb-2">Arafat Hospital</h3>
+                <p className="text-sm opacity-90">Innovative healthcare marketing showcasing medical excellence and patient care.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
