@@ -80,7 +80,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div 
-          className={`fixed inset-0 z-40 ${darkMode ? 'bg-[#191A17]' : 'bg-white'} md:hidden transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`fixed inset-0 z-40 ${darkMode ? 'bg-[#191A17]' : 'bg-white'} md:hidden transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-sm bg-opacity-90`}
           style={{ top: '64px' }}
         >
           <div className="flex flex-col items-center space-y-8 pt-8">

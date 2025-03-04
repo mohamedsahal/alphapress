@@ -103,7 +103,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Digital Marketing</h3>
-              <p className="opacity-75">Boost your brand's online presence with SEO, social media, and advertising.</p>
+              <p className="opacity-75">Boost your brand&apos;s online presence with SEO, social media, and advertising.</p>
             </div>
 
             {/* Printing & Branding Service */}
@@ -132,7 +132,7 @@ export default function Home() {
             <div className={`group p-8 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm border border-transparent hover:border-[#EE4263]`}>
               <div className="w-12 h-12 mb-6 text-[#EE4263] group-hover:scale-110 transition-transform duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
