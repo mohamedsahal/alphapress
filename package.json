@@ -11,6 +11,8 @@
   "dependencies": {
     "@geist-ui/core": "^2.3.8",
     "@next/font": "^14.2.15",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.75",
     "next": "15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

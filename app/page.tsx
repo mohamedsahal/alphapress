@@ -1,7 +1,6 @@
 'use client';
 
 import { useTheme } from './context/ThemeContext';
-import Navbar from './components/Navbar';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,7 +17,7 @@ export default function Home() {
         backgroundSize: '150px 150px'
       }}
     >
-      <Navbar />
+      {/* Removed Navbar component as it's already in layout.tsx */}
       <main className="pt-16">
         <section className="container mx-auto px-4 py-20">
        
@@ -41,45 +40,38 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right side - Feature List */}
-              <div className={`relative p-8 rounded-xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm`}>
-                {/* macOS window dots */}
-                <div className="absolute top-4 left-4 flex space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
-                  <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
-                  <div className="w-3 h-3 rounded-full bg-[#27C93F]"></div>
+              {/* Right side - 3D Spline Scene */}
+              <div className="relative h-[400px] overflow-hidden">
+                {/* Desktop view - 3D Spline Scene */}
+                <div className="hidden lg:block absolute inset-0 w-full h-full" style={{ clipPath: 'inset(0 0 55px 0)' }}>
+                  <spline-viewer loading-anim-type="none" url="https://prod.spline.design/iZ7iqyisbW8BWJH5/scene.splinecode"></spline-viewer>
                 </div>
                 
-                <div className="space-y-6 mt-6">
-                  <h2 className="text-2xl font-semibold mb-8">Why Choose Alpha Press?</h2>
+                {/* Mobile view - macOS window style with 'Why Choose Alpha Press?' */}
+                <div className={`lg:hidden block relative p-8 rounded-xl ${darkMode ? 'bg-white/5' : 'bg-black/5'} backdrop-blur-sm h-full w-full`}>
+                  {/* macOS window dots */}
+                  <div className="absolute top-4 left-4 flex space-x-2 z-10">
+                    <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
+                    <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                    <div className="w-3 h-3 rounded-full bg-[#27C93F]"></div>
+                  </div>
                   
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4 p-4 rounded-lg transition-all duration-300 hover:bg-[#EE4263] hover:bg-opacity-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#EE4263] mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
+                  <div className="pt-8">
+                    <h3 className="text-2xl font-bold mb-6">Why Choose Alpha Press?</h3>
+                    
+                    <div className="space-y-6">
                       <div>
-                        <h3 className="font-semibold">Innovative Solutions</h3>
+                        <h4 className="text-xl font-semibold text-[#EE4263] mb-2">Innovative Solutions</h4>
                         <p className="opacity-75">Merging creativity with cutting-edge technology.</p>
                       </div>
-                    </div>
-
-                    <div className="flex items-start gap-4 p-4 rounded-lg transition-all duration-300 hover:bg-[#EE4263] hover:bg-opacity-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#EE4263] mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                      </svg>
+                      
                       <div>
-                        <h3 className="font-semibold">Comprehensive Services</h3>
+                        <h4 className="text-xl font-semibold text-[#EE4263] mb-2">Comprehensive Services</h4>
                         <p className="opacity-75">From printing to digital marketing, all in one place.</p>
                       </div>
-                    </div>
-
-                    <div className="flex items-start gap-4 p-4 rounded-lg transition-all duration-300 hover:bg-[#EE4263] hover:bg-opacity-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#EE4263] mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                      </svg>
+                      
                       <div>
-                        <h3 className="font-semibold">Client-Centric Approach</h3>
+                        <h4 className="text-xl font-semibold text-[#EE4263] mb-2">Client-Centric Approach</h4>
                         <p className="opacity-75">Tailored solutions to bring your vision to life.</p>
                       </div>
                     </div>
@@ -165,7 +157,7 @@ export default function Home() {
         </section>
 
         {/* Brand Showcase Section */}
-        <section className="container mx-auto px-4 py-20 overflow-hidden">
+        <section className="container mx-auto px-4 py-20">
           <h2 className="text-4xl font-bold text-center mb-16">Brands We've Worked With</h2>
           <div className="relative">
             <div className="flex space-x-8 animate-scroll">

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './components/Navbar';
 import "./globals.css";
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,9 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <head>
+        <Script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.75/build/spline-viewer.js" />
+      </head>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <ThemeProvider>
-          {children}
+          <Navbar />
+          <main className="pt-16">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
